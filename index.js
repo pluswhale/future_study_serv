@@ -37,9 +37,7 @@ app.use(passport.session());
 app.use(cors({
     origin: "http://localhost:3000/",
     credentials: true,
-    allowedHeaders: {
-        "Access-Control-Allow-Headers": ['Content-Type','Authorization']
-    }
+    methods: "GET,POST,PUT,DELETE, PATCH",
     
 }));
 
