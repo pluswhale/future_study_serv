@@ -47,7 +47,7 @@ app.use("/", (req, res) => {
     res.send("serv running")
 });
 
-const server = app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT, () => {
     console.log(`server is running on port: ${process.env.PORT}`);
 });
 
