@@ -43,8 +43,13 @@ app.use(cors({
 
 app.use("/api/auth", userRoute);
 app.use("/auth", authRoute);
-app.use("/", homeRoute);
+app.use("/", (req, res) => {
+    res.send("serv running")
+});
 
 const server = app.listen(process.env.PORT, () => {
     console.log(`server is running on port: ${process.env.PORT}`);
 });
+
+
+module.exports = app;
