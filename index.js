@@ -36,7 +36,7 @@ app.use(passport.session());
 
 app.use(cors({
     origin: "http://localhost:3000/",
-    credentials: 'include',
+    credentials: true,
     allowedHeaders: {
         "Access-Control-Allow-Headers": ['Content-Type','Authorization']
     }
